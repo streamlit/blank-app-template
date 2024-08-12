@@ -3,9 +3,8 @@ import pickle
 import pandas as pd
 from sklearn import datasets
 from catboost import CatBoostClassifier
-import joblib
 
-clf = joblib.load('my_first_best_pipeline_cboost.pkl')
+clf = pickle.load('best_pipeline.pkl')
 
 st.title("🎈 College Classification App")
 st.write("This application classifies universities and colleges into two classes: High - meaning those with more than 20 awards issued for every 100 fulltime students enrolled, and Low - those with les than 20 awards.")
