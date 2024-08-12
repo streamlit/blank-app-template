@@ -1,1 +1,5 @@
-streamlit
+streamlit==1.37.1
+catboost==1.2.5
+matplotlib==3.9.1.post1
+pandas==2.2.2
+numpy==2.0.1
