@@ -6,6 +6,7 @@ header = st.container()
 dataset = st.container()
 features = st.container()
 model_section = st.container()
+footer = st.container()
 
 st.markdown(
     """
@@ -66,14 +67,15 @@ with model_section:
     # Make a prediction
     if st.button("Classify"):
         prediction = predict_model(model, data=data)
-        st.write(f"Prediction: {prediction['Label'][0]}")
-    else:
-        st.write("There's something wrong with the model. Please fix any errors.")
+        prediction_label = prediction.get('Label', 'Label key not found')
+        st.write(f"Prediction: {prediction_label}")
 
-
+with footer:
+    #User rating feature
     st.subheader("Rate this App")
     st.feedback("stars")
 
+    # User chat feature
     st.subheader("Message us:")
     prompt = st.text_input("Your message")
     if prompt:
