@@ -67,8 +67,8 @@ with model_section:
     # Make a prediction
     if st.button("Classify"):
         prediction = predict_model(model, data=data)
-        prediction_label = prediction.get('Label', 'Label key not found')
-        st.write(f"Prediction: {prediction_label}")
+        #prediction_label = prediction.get('Label', 'Label key not found')
+        st.write(prediction)
 
 with footer:
     #User rating feature
