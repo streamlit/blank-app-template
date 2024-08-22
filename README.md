@@ -27,12 +27,13 @@ st.markdown(
 def load_data():
     return pd.read_csv('ml_dataset.csv')
 
-
+### Title and Description of the App
 with header:
     st.title("🎈 College Classification Web App")
     st.divider()
     st.write("This application classifies universities and colleges into two classes: 'High class' - meaning the university offers a high number of awards for every 100-fulltime students, and 'Low class' - for institutions offering small number of awards for every 100-fulltime students.")
 
+## Dataset:
 with dataset:
     st.header('College completion dataset')
     st.write(
@@ -45,7 +46,7 @@ with dataset:
     chart_data = pd.DataFrame(np.random.randn(20, 4), columns=['exp_award_value', 'ft_pct',
                                                                'grad_100_value', 'cohort_size'])
     st.bar_chart(chart_data)
-
+## Features:
 with features:
     st.header('Input Features:')
 
@@ -67,16 +68,16 @@ with features:
             # Filter the dataframe based on slider values
             filtered_data = filtered_data[(filtered_data[feature] >= min_slider) & (
                 filtered_data[feature] <= max_slider)]
-
+### Loading a Trained Model
         model = load_model('my_first_best_pipeline')
-
+### Making Predictions
         # Make prediction
         if st.button("Classify"):
             prediction = predict_model(model, data=filtered_data)
             # prediction_label = prediction.get('Label', 'Label key not found')
             st.write(prediction)
 
-
+### User Experience Forum
 with footer:
     # User rating feature
     st.subheader("Rate this App")
