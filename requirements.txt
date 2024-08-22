@@ -1,5 +1,5 @@
 streamlit==1.37.1
-matplotlib==3.9.1
+matplotlib
 pandas
 numpy
-pycaret==3.3.2
+pycaret
