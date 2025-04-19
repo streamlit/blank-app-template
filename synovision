@@ -1,0 +1,23 @@
+# streamlit_app.py
+
+import streamlit as st
+import numpy as np
+import joblib
+
+# Load the trained model
+model = joblib.load("synovial_volume_model.pkl")  # Make sure this file is in the same folder
+
+# Streamlit App
+st.set_page_config(page_title="Synovial Fluid Volume Estimator", layout="centered")
+st.title("🧠 Synovial Fluid Volume Estimation")
+st.write("Estimate synovial fluid volume (in mL) using ultrasound area and impedance readings.")
+
+# Inputs from user
+area = st.number_input("Enter ultrasound-detected fluid area (in cm²):", min_value=0.0, step=0.1)
+impedance = st.number_input("Enter impedance reading (in Ohms):", min_value=0.0, step=1.0)
+
+# Predict
+if st.button("Estimate Volume"):
+    input_data = np.array([[area, impedance]])
+    prediction = model.predict(input_data)
+    st.success(f"🧪 Estimated Synovial Fluid Volume: {round(prediction[0], 2)} mL")
