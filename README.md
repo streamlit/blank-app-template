@@ -1,4 +1,4 @@
-# 🎈 Blank app template
+# 🎈 Mental Health Tracker
 
 A simple Streamlit app template for you to modify!
 
