@@ -53,7 +53,7 @@ dependencies = [
 ]
 
 [package.metadata]
-requires-dist = [{ name = "streamlit", specifier = ">=1.59.0" }]
+requires-dist = [{ name = "streamlit", specifier = ">=1.59.1" }]
 
 [[package]]
 name = "blinker"
@@ -556,7 +556,7 @@ wheels = [
 
 [[package]]
 name = "streamlit"
-version = "1.59.0"
+version = "1.59.1"
 source = { registry = "https://pypi.org/simple" }
 dependencies = [
     { name = "altair" },
@@ -584,9 +584,9 @@ dependencies = [
     { name = "watchdog", marker = "sys_platform != 'darwin'" },
     { name = "websockets" },
 ]
-sdist = { url = "https://files.pythonhosted.org/packages/90/b8/e13c137c299b47f683fe6d4e198075f37a2c7666c9b96010070d58c2037c/streamlit-1.59.0.tar.gz", hash = "sha256:aaa9616f75421cd7cb8c9de8940b2b7edfe266a9d81e78195252d88fd2b00a75", size = 9760463, upload-time = "2026-07-06T15:28:10.943Z" }
+sdist = { url = "https://files.pythonhosted.org/packages/91/70/1d488cb07fe8510805233c7128272d6502e621146eb0531420211279a898/streamlit-1.59.1.tar.gz", hash = "sha256:0f75162a43b1cd2542f34bff3168c4ea56c7a151fa80bfea02499913fbfccfca", size = 9770793, upload-time = "2026-07-08T12:57:03.26Z" }
 wheels = [
-    { url = "https://files.pythonhosted.org/packages/d4/6d/4ea54c377fb208e6a430c40a8dd6b271e5ea8f2191079875731ef88ec3c7/streamlit-1.59.0-py3-none-any.whl", hash = "sha256:d3e3c30caf0915e994b2b263418b28aa05ee5ba90f39e0a59b4c8021dd435d4c", size = 10329987, upload-time = "2026-07-06T15:28:07.753Z" },
+    { url = "https://files.pythonhosted.org/packages/49/84/732e4c832a6ec79cc3119aea2da367bbc00c376a41a063bc477d62e20077/streamlit-1.59.1-py3-none-any.whl", hash = "sha256:b00d41fa9024d28ab30b81e56ddf07d61cda6ae625231dcb13e0be6c07ef1e0f", size = 10338093, upload-time = "2026-07-08T12:57:00.954Z" },
 ]
 
 [[package]]
