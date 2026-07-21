@@ -5,7 +5,7 @@ description = "A simple Streamlit app template."
 readme = "README.md"
 requires-python = ">=3.14"
 dependencies = [
-    "streamlit>=1.59.2",
+    "streamlit>=1.60.0",
 ]
 
 [tool.uv]
